@@ -377,7 +377,7 @@
     </div>
   </div>
 
-  <div class="footer">الصف الأول الثانوي - شعبة 1 · جميع الحقوق محفوظة |بواسطة: راما خبيب عبد الله</div>
+  <div class="footer">الصف الأول الثانوي - شعبة 1 · جميع الحقوق محفوظة</div>
 
   <div class="modal-overlay" id="resultModal">
     <div class="modal-content">
@@ -539,7 +539,7 @@
       function renderQuestion() {
         const q = finalQuestions[currentIndex];
         questionText.innerText = q.text;
-        let html = `<div class="likert-end">أرفض</div>`;
+        let html = `<div class="likert-end">أوافق</div>`;
         for (let i = 0; i < 7; i++) {
           const label = optionLabels[i];
           const isSelected = (answers[currentIndex] === i);
@@ -550,7 +550,7 @@
             </div>
           `;
         }
-        html += `<div class="likert-end">أوافق</div>`;
+        html += `<div class="likert-end">أرفض</div>`;
         likertContainer.innerHTML = html;
         document.querySelectorAll('.likert-option').forEach(opt => {
           opt.addEventListener('click', (e) => {
